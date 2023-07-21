@@ -1,6 +1,7 @@
 import { useState, useEffect, ChangeEvent, MouseEvent } from "react";
 import type { NextPage } from "next";
 import { useDispatch, useSelector } from "react-redux";
+
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
@@ -9,13 +10,14 @@ import { getEmployees } from "@/actions/employee.actions";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
-  const dispatch = useDispatch();
-  const employees = useSelector((state: any) => state?.employee?.employees);
-  console.log("🚀 ~ file: list.tsx:16 ~ Employees ~ employees:", employees);
-  useEffect(() => {
-    dispatch(getEmployees());
-  }, []);
+export default function Employees() {
+  //   const dispatch = useDispatch();
+  //   const employees = useSelector((state: any) => state?.employee?.employees);
+  //   console.log("🚀 ~ file: list.tsx:16 ~ Employees ~ employees:", employees);
+  //   useEffect(() => {
+  //     dispatch(getEmployees());
+  //   }, []);
+
   return (
     <>
       <Head>
